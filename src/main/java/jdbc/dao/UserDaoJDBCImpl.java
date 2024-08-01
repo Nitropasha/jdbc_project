@@ -18,8 +18,11 @@ public class UserDaoJDBCImpl implements UserDao {
     private static String UPDATE_TABLE = "INSERT INTO students (name, lastname, age) VALUES ('ee','eee', 33)";
     private static String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS students6 (id BIGINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), lastname VARCHAR(50), age INTEGER)";
     private static String query = "SELECT * FROM students6";
+
+
     public UserDaoJDBCImpl() {
     }
+
 
     public void createUsersTable() {
         try (Connection connection = Util.getConnection();
